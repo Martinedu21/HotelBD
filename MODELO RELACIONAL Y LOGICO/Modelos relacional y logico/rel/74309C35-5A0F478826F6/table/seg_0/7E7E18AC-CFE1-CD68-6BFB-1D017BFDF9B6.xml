@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7E7E18AC-CFE1-CD68-6BFB-1D017BFDF9B6" name="EMPLEADO">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>82DC831E-DC07-D08B-4061-57C16C5DD4AA</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_empleado" id="13A2E1FA-10F2-8138-F3CF-5195C84B905C">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>8EADE1FF-4AF1-0294-DA0B-C1BA7C47CAD9</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="9D15CDDA-FD17-E48B-5B50-3E3AADD6816A">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>A4836220-65D9-FD54-8E8D-B16841FFEE70</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido" id="217DC1FE-49C9-F1D2-ED58-A9DDDC337A46">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>C00FB713-979A-5C75-CD4E-715BB32D244E</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cargo" id="28633BCA-3030-9D8D-F7D7-9FBEF82E652E">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>3D6C643E-0548-16D3-D4FD-B575AF18B59B</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="FAAE756A-6CE8-689E-AD1E-3D825BF6A63C">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>11D8C287-9C9E-DD44-1D65-160FE7C42376</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="1D30D650-EB16-E7A1-4DBC-40BD1D703000">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>FA0944A8-8804-07F5-10B9-A01CEA3A277D</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOTEL_id_hotel" id="3F68F4A4-E239-2180-72E6-20A5B97E63C7">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>C4EA75A7-1D76-7D16-5450-A91CB6304C94</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="24342B2E-9FA2-5B9D-1652-E400EA269324" referredColumn="94415F53-9733-897F-02F2-2D164CE845B8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EED7E153-19FC-E0B9-9763-4FAC71EE35F8" name="EMPLEADO_PK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>FFAF51A8-6DF3-19F3-F5CB-50F9D7BB5F75</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13A2E1FA-10F2-8138-F3CF-5195C84B905C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DE1CCF5A-6302-8B4B-1931-419677A700FA" name="EMPLEADO_HOTEL_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>3C1D3005-5386-0BFB-F699-940D89CCDEBE</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3F68F4A4-E239-2180-72E6-20A5B97E63C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FC1054B5-2F83-C3A6-9740-56D2BCB2E959" containerWithKeyObject="743C9BB5-1066-AB54-A6DD-AA765E0B6ED5" localFKIndex="CCACE661-DAB3-A96D-11DC-538C14069907" name="PAGO_RESERVA_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>989B8652-8651-BA9F-34D0-D976EA5CC74E</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<referredTableLongName>RESERVA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>3945E36E-D8AF-002E-1976-9462547891E2</referredTableID>
+<keyObject>260F9353-B5F8-D533-9937-52544E00FE28</keyObject>
+<referredKeyID>260F9353-B5F8-D533-9937-52544E00FE28</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_reserva</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

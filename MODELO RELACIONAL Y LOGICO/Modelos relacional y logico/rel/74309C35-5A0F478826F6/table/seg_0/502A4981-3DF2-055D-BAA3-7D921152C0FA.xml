@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="502A4981-3DF2-055D-BAA3-7D921152C0FA" name="SERVICIO">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>869C49A2-EC87-E154-26A0-26CE5794DA98</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servicio" id="B935B137-2A70-33BA-3EB1-BE6D23BB0995">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>8EFCFEF8-EEC6-88BF-9136-8903F287B26D</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_servicio" id="05AE5464-9369-ADCF-70B1-2F0EFC0BE6A9">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>7EF7D90B-C921-6E0C-A2B7-15D210C2024B</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descipcion" id="BFEB60BD-115E-C27A-7C9D-6DCCBEF4D579">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>20FF8244-0656-D8AE-C99B-253210E9CF75</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio_servicio" id="46E0ABFE-3FBE-2600-C6DA-CCD93D67BB34">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>A0F17084-1D99-BB37-8678-B59976E41697</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOTEL_id_hotel" id="CE7536DB-CC75-07AB-6CB2-BA34CE9C9761">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>DAE3B999-A831-0794-3A26-BA85859522F9</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41BA4B79-9944-330D-BB32-E14A2C41C99A" referredColumn="94415F53-9733-897F-02F2-2D164CE845B8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2AE694FC-94A2-4592-30CA-C52B99AD9E3B" name="SERVICIO_PK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>3AAD1D0E-6298-81AE-F80E-3E0D7C84D63D</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B935B137-2A70-33BA-3EB1-BE6D23BB0995"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D03A3038-17FA-1618-F0BA-34C036D17844" name="SERVICIO_HOTEL_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>D7193EB4-5EAC-10BA-4DC5-D1C16DED2BCC</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE7536DB-CC75-07AB-6CB2-BA34CE9C9761"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

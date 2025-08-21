@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5BFD55A8-9F98-E5B2-5284-6D260FEC9EB2" name="RESERVA">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:23:54 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_reserva" id="BAF2F8F4-FB53-1B9D-EEBA-3CDFB393782D">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:24:12 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inicio" id="B24E1FAD-EB00-B9A5-F18D-6E24E5E37C60">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:25:40 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_fin" id="6BDB080B-93FA-7851-F16A-1CE22FC4EAAF">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:26:13 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="DC4CC3CF-1A5B-BF31-837A-C91B19476D9C">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:26:31 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_cliente" id="299FEA95-84B1-AB32-196D-ACBAF09CEDB9">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:19:29 UTC</createdTime>
+<generatorID>9FB2EE06-FE15-9185-DE68-99B3E2AE9529</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<referedAttribute>98A9FC1B-05B3-D0C5-E43A-74D34AB4C2DC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_habitacion" id="A068141C-9AA2-3AC8-D005-082D63BB18E3">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:19:42 UTC</createdTime>
+<generatorID>6631DC52-6356-9295-63D4-6DA649AEED8B</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<referedAttribute>34CC2F94-0FB4-DE60-67BB-CEF3AFE393B3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_consumo" id="69C9C1C0-F537-454E-8186-1D3298EB7388">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:20:21 UTC</createdTime>
+<generatorID>10AFC8BD-A329-8AEE-2C1B-611686B3C319</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CA6FAC67-FFA4-B3A2-9830-4C728A56AD48</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_empleado" id="363A3C25-0481-664C-C122-E7609A7A7A26">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:23:15 UTC</createdTime>
+<generatorID>11AFF391-6851-5BC6-0379-85A55D5CD103</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<referedAttribute>8EADE1FF-4AF1-0294-DA0B-C1BA7C47CAD9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8C653E66-71EA-7137-C5CC-3485EF882E45" name="Reserva PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:24:21 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BAF2F8F4-FB53-1B9D-EEBA-3CDFB393782D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

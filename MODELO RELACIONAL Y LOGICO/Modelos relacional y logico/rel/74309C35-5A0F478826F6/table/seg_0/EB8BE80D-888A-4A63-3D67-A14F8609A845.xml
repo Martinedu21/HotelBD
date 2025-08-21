@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB8BE80D-888A-4A63-3D67-A14F8609A845" name="HABITACION">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>37190D71-8183-99DA-7EBE-8AE113CF4A4E</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_habitacion" id="9767D095-63D2-4611-E0CC-746046B2BB0B">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>34CC2F94-0FB4-DE60-67BB-CEF3AFE393B3</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero" id="D590D477-F25F-3F7D-DAFD-D00B8999DA3A">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>EE9C5D11-627F-0163-42E6-47EB3A2082E0</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo" id="95088770-555C-C933-A568-56A724B24CF3">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>10F9A449-762E-CC32-C895-1E4E2D4925CF</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio_por_noche" id="A4E5C4EC-8CF7-3CC3-80B4-1283E56D7B38">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>E7870562-B616-AA95-B560-33D710314DEF</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="458A9DEC-1885-52A2-EC11-D9C5C29FED57">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>9C3B04EA-FD60-86CD-8313-423EDB46CDD8</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HOTEL_id_hotel" id="4A7F513A-9AA9-589A-572A-6420AA0D0E27">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>4B7C2744-A2E5-7470-11EC-E69EC81A3A41</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4A19DBB3-C947-3B1D-CA96-00393C5C5734" referredColumn="94415F53-9733-897F-02F2-2D164CE845B8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="677977F6-AE6E-3422-3DED-0BD85505CF55" name="HABITACION_PK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>1CF91D90-53CE-710C-D642-04325A2896AC</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9767D095-63D2-4611-E0CC-746046B2BB0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56B051FE-791E-B93C-9416-BD341510D7EC" name="HABITACION_HOTEL_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>70CAB5D2-A37B-A152-3EA4-0D010D06122E</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A7F513A-9AA9-589A-572A-6420AA0D0E27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

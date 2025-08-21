@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A47B299D-A174-CC3E-E723-361F858FA574" name="CLIENTE">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:20:26 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_cliente" id="98A9FC1B-05B3-D0C5-E43A-74D34AB4C2DC">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:20:38 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="7C1EFB31-5EE5-4EE7-D0AB-FE3C4EEAD9AB">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:20:53 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="4BF5AC4E-2695-4B5F-E66B-52E53FD48982">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:21:00 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="run" id="7FFF51AB-B7CD-42F9-226D-891FA7B022C3">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:21:06 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="76364E99-1617-A7B3-F4C2-6D865920AD3F">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:21:26 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="4A959BAA-6470-3DAE-E015-AA83EE024476">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:21:35 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="3715A8F7-CC89-CCF5-5137-E22791199E65">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:21:40 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E63672BD-6EC7-3BF6-0E5D-3C344E0214EE" name="Cliente PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:20:51 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>98A9FC1B-05B3-D0C5-E43A-74D34AB4C2DC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

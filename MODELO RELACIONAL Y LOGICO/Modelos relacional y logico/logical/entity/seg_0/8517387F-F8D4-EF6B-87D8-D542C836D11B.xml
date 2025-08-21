@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8517387F-F8D4-EF6B-87D8-D542C836D11B" name="CONSUMO_SERVICIO">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:39:17 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_consumo" id="CA6FAC67-FFA4-B3A2-9830-4C728A56AD48">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:39:33 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cantidad" id="6E379DA2-2236-C701-4E6B-F67BDC0E0927">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:39:55 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total" id="60480896-573A-0DC4-C1EC-DBE5515F4FF9">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:40:07 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_reserva" id="27B7E866-9FEC-CE56-FCCA-067DE53EEC98">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:20:21 UTC</createdTime>
+<generatorID>10AFC8BD-A329-8AEE-2C1B-611686B3C319</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>BAF2F8F4-FB53-1B9D-EEBA-3CDFB393782D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_servicio" id="18768B0E-FA00-5089-9729-57D3D0EFDEEE">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:20:52 UTC</createdTime>
+<generatorID>BB220058-DDCB-C0AC-C91C-51F75C8094F6</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<referedAttribute>8EFCFEF8-EEC6-88BF-9136-8903F287B26D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FD8D82C6-19A2-D694-EE46-B74BBC8648A8" name="CONSUMO_SERVICIO PK">
+<createdBy>Cetecom</createdBy>
+<createdTime>2025-08-19 22:39:52 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<engineerTo>
+<item key="74309C35-7A14-F6AB-291F-5A0F478826F6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA6FAC67-FFA4-B3A2-9830-4C728A56AD48</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

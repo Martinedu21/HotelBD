@@ -1,0 +1,188 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3945E36E-D8AF-002E-1976-9462547891E2" name="RESERVA">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>5BFD55A8-9F98-E5B2-5284-6D260FEC9EB2</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_reserva" id="BF438E3C-FCE4-0DB7-413E-48905F60A573">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>BAF2F8F4-FB53-1B9D-EEBA-3CDFB393782D</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inicio" id="9771D96A-862D-1E9B-AA88-AE2F7B116F13">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>B24E1FAD-EB00-B9A5-F18D-6E24E5E37C60</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_fin" id="B462450E-45DF-14C8-4700-F9AF46D0656B">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>6BDB080B-93FA-7851-F16A-1CE22FC4EAAF</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="B486E845-6DE0-2B9F-AF16-69B07CF75670">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>DC4CC3CF-1A5B-BF31-837A-C91B19476D9C</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENTE_id_cliente" id="2541D1D7-40D6-E4EB-D6FF-27B6029D089C">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>299FEA95-84B1-AB32-196D-ACBAF09CEDB9</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C0031B97-DAD7-C19B-5493-22B9C3A95036" referredColumn="17AB619B-07EC-6F3A-1764-50AC784BFFAF"/>
+</associations>
+</Column>
+<Column name="HABITACION_id_habitacion" id="96C7A1C9-D055-3E96-866E-F10B2E3F1EE0">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>A068141C-9AA2-3AC8-D005-082D63BB18E3</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0656D82C-8CF9-C53A-B59E-C9948C0F3174" referredColumn="9767D095-63D2-4611-E0CC-746046B2BB0B"/>
+</associations>
+</Column>
+<Column name="CONSUMO_SERVICIO_id_consumo" id="F69A7908-AD43-9FBF-67A0-1C88F6BA006B">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>69C9C1C0-F537-454E-8186-1D3298EB7388</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEAED6CE-35CB-F735-8A0B-284BD96E8670" referredColumn="60A4A003-4824-3442-1247-6030536E82B4"/>
+</associations>
+</Column>
+<Column name="EMPLEADO_id_empleado" id="3E1FAB39-AF56-BC52-CB99-10BCE1788ABC">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>363A3C25-0481-664C-C122-E7609A7A7A26</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E47D1087-DFD3-6A74-74D2-BB03997B72FB" referredColumn="13A2E1FA-10F2-8138-F3CF-5195C84B905C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="260F9353-B5F8-D533-9937-52544E00FE28" name="RESERVA_PK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>8C653E66-71EA-7137-C5CC-3485EF882E45</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF438E3C-FCE4-0DB7-413E-48905F60A573"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7358620A-7188-951A-46C2-75E6DCE2ACA3" name="RESERVA__IDX">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>10AFC8BD-A329-8AEE-2C1B-611686B3C319</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F69A7908-AD43-9FBF-67A0-1C88F6BA006B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67EC775A-0A48-6DCE-CFCC-39E4AA2656AF" name="RESERVA_EMPLEADO_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>11AFF391-6851-5BC6-0379-85A55D5CD103</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E1FAB39-AF56-BC52-CB99-10BCE1788ABC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C1B9BDC-B6D2-4248-8840-DD083917A46C" name="RESERVA_CLIENTE_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>9FB2EE06-FE15-9185-DE68-99B3E2AE9529</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2541D1D7-40D6-E4EB-D6FF-27B6029D089C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92DA969E-C9EF-3360-8606-C0D84C549339" name="RESERVA_HABITACION_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>6631DC52-6356-9295-63D4-6DA649AEED8B</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96C7A1C9-D055-3E96-866E-F10B2E3F1EE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A5F4A804-F4FD-CC02-1A12-162C95F0875F" name="RESERVA_CONSUMO_SERVICIO_FK">
+<createdBy>MartinEdu</createdBy>
+<createdTime>2025-08-21 23:28:43 UTC</createdTime>
+<generatorID>10AFC8BD-A329-8AEE-2C1B-611686B3C319</generatorID>
+<ownerDesignName>Modelos relacional y logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F69A7908-AD43-9FBF-67A0-1C88F6BA006B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
