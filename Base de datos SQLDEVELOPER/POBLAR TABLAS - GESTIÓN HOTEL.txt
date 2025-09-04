@@ -1,61 +1,80 @@
 POBLAR TABLAS - GESTIÓN HOTEL
 -- ==============================
 
--- 1) HOTEL
-INSERT INTO HOTEL (id_hotel, nombre, direccion, telefono, email) VALUES
-(1, 'Hotel Andes', 'Av. Principal 123, Santiago', '22223333', 'contacto@andes.cl');
-INSERT INTO HOTEL (id_hotel, nombre, direccion, telefono, email) VALUES
-(2, 'Hotel Pacífico', 'Calle Mar 456, Viña del Mar', '32334455', 'info@pacifico.cl');
+==HOTEL==
 
--- 2) SERVICIO
-INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, HOTEL_id_hotel) VALUES
-(1, 'Spa', 'Acceso al spa y masajes', 25000, 1);
-INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, HOTEL_id_hotel) VALUES
-(2, 'Desayuno buffet', 'Desayuno completo buffet', 8000, 1);
-INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, HOTEL_id_hotel) VALUES
-(3, 'Tour guiado', 'Tour por la ciudad', 15000, 2);
+INSERT INTO HOTEL (id_hotel, nombre, direccion, telefono, email) 
+VALUES (1, 'Hotel Grand Plaza', 'Av. Libertador 1234, Santiago, Chile', '123456789', 'contacto@grandplaza.com');
 
--- 3) HABITACION
-INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, HOTEL_id_hotel) VALUES
-(1, '101', 'Single', 35000, 'D', 1);
-INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, HOTEL_id_hotel) VALUES
-(2, '102', 'Doble', 55000, 'D', 1);
-INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, HOTEL_id_hotel) VALUES
-(3, '201', 'Suite', 120000, 'O', 2);
+INSERT INTO HOTEL (id_hotel, nombre, direccion, telefono, email) 
+VALUES (2, 'Hotel Vista Verde', 'Calle Sol 567, Valparaíso, Chile', '987654321', 'info@vistaverde.com');
 
--- 4) EMPLEADO
-INSERT INTO EMPLEADO (id_empleado, nombre, apellido, cargo, telefono, email, HOTEL_id_hotel) VALUES
-(1, 'Ana', 'Pérez', 'Recepcionista', 987654321, 'ana@andes.cl', 1);
-INSERT INTO EMPLEADO (id_empleado, nombre, apellido, cargo, telefono, email, HOTEL_id_hotel) VALUES
-(2, 'Luis', 'Gómez', 'Administrador', 987654322, 'luis@pacifico.cl', 2);
+==SERVICIO==
 
--- 5) CLIENTE
-INSERT INTO CLIENTE (id_cliente, nombre, apellido, run, telefono, email, direccion) VALUES
-(1, 'Carlos', 'Soto', '12.345.678-9', '987654000', 'carlos@mail.com', 'Av. Libertad 123');
-INSERT INTO CLIENTE (id_cliente, nombre, apellido, run, telefono, email, direccion) VALUES
-(2, 'María', 'López', '15.234.567-8', '987654001', 'maria@mail.com', 'Calle Central 456');
+INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, id_hotel) 
+VALUES (1, 'Wi-Fi', 'Acceso a internet inalámbrico', 5000, 1);
 
--- 6) RESERVA (primero insertamos sin CONSUMO_SERVICIO, porque hay dependencia circular)
-INSERT INTO RESERVA (id_reserva, fecha_inicio, fecha_fin, estado, CLIENTE_id_cliente, HABITACION_id_habitacion, CONSUMO_SERVICIO_id_consumo, EMPLEADO_id_empleado)
-VALUES (1, TO_DATE('2025-09-01','YYYY-MM-DD'), TO_DATE('2025-09-05','YYYY-MM-DD'), 'A', 1, 1, NULL, 1);
+INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, id_hotel) 
+VALUES (2, 'Desayuno', 'Desayuno buffet', 10000, 1);
 
-INSERT INTO RESERVA (id_reserva, fecha_inicio, fecha_fin, estado, CLIENTE_id_cliente, HABITACION_id_habitacion, CONSUMO_SERVICIO_id_consumo, EMPLEADO_id_empleado)
-VALUES (2, TO_DATE('2025-09-10','YYYY-MM-DD'), TO_DATE('2025-09-12','YYYY-MM-DD'), 'A', 2, 2, NULL, 1);
+INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, id_hotel) 
+VALUES (3, 'Piscina', 'Acceso a la piscina', 15000, 2);
 
--- 7) CONSUMO_SERVICIO
-INSERT INTO CONSUMO_SERVICIO (id_consumo, cantidad, total, RESERVA_id_reserva, SERVICIO_id_servicio)
-VALUES (1, 2, 16000, 1, 2); -- Carlos pidió 2 desayunos
+==HABITACION==
 
-INSERT INTO CONSUMO_SERVICIO (id_consumo, cantidad, total, RESERVA_id_reserva, SERVICIO_id_servicio)
-VALUES (2, 1, 25000, 2, 1); -- María pidió un servicio de spa
+INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, id_hotel) 
+VALUES (1, '101', 'Individual', 30000, 'A', 1);
 
--- 8) Ahora actualizamos RESERVA para enlazar con CONSUMO_SERVICIO
-UPDATE RESERVA SET CONSUMO_SERVICIO_id_consumo = 1 WHERE id_reserva = 1;
-UPDATE RESERVA SET CONSUMO_SERVICIO_id_consumo = 2 WHERE id_reserva = 2;
+INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, id_hotel) 
+VALUES (2, '102', 'Doble', 50000, 'A', 1);
 
--- 9) PAGO
-INSERT INTO PAGO (id_pago, RESERVA_id_reserva, monto, fecha_de_pago, metodo_pago, estado)
-VALUES (1, 1, 150000, TO_DATE('2025-09-05','YYYY-MM-DD'), 'Tarjeta', 'P');
+INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, id_hotel) 
+VALUES (3, '201', 'Suite', 120000, 'A', 2);
 
-INSERT INTO PAGO (id_pago, RESERVA_id_reserva, monto, fecha_de_pago, metodo_pago, estado)
-VALUES (2, 2, 110000, TO_DATE('2025-09-12','YYYY-MM-DD'), 'Efectivo', 'P');
+==EMPLEADO==
+
+INSERT INTO EMPLEADO (id_empleado, nombre, apellido, cargo, telefono, email, id_hotel) 
+VALUES (1, 'Juan', 'Pérez', 'Recepcionista', 11223344, 'juan.perez@grandplaza.com', 1);
+
+INSERT INTO EMPLEADO (id_empleado, nombre, apellido, cargo, telefono, email, id_hotel) 
+VALUES (2, 'Ana', 'Martínez', 'Camarera', 22334455, 'ana.martinez@vistaverde.com', 2);
+
+==CLIENTE==
+
+INSERT INTO CLIENTE (id_cliente, nombre, apellido, run, telefono, email, direccion) 
+VALUES (1, 'Carlos', 'Gómez', '12345678-9', '987654321', 'carlos.gomez@gmail.com', 'Calle Falsa 123');
+
+INSERT INTO CLIENTE (id_cliente, nombre, apellido, run, telefono, email, direccion) 
+VALUES (2, 'Laura', 'Rodríguez', '98765432-1', '123456789', 'laura.rodriguez@gmail.com', 'Av. Libertador 456');
+
+==RESERVA==
+
+INSERT INTO RESERVA (id_reserva, fecha_inicio, fecha_fin, estado, id_cliente, id_habitacion, id_consumo, id_empleado)
+VALUES (1, TO_DATE('2023-10-01', 'YYYY-MM-DD'), TO_DATE('2023-10-05', 'YYYY-MM-DD'), 'A', 1, 1, NULL, 1);
+
+INSERT INTO RESERVA (id_reserva, fecha_inicio, fecha_fin, estado, id_cliente, id_habitacion, id_consumo, id_empleado)
+VALUES (2, TO_DATE('2023-10-03', 'YYYY-MM-DD'), TO_DATE('2023-10-04', 'YYYY-MM-DD'), 'A', 2, 2, NULL, 2);
+
+==CONSUMO SERVICIO==
+
+INSERT INTO CONSUMO_SERVICIO (id_consumo, cantidad, total, id_reserva, id_servicio) 
+VALUES (1, 1, 5000, 1, 1);
+
+INSERT INTO CONSUMO_SERVICIO (id_consumo, cantidad, total, id_reserva, id_servicio) 
+VALUES (2, 2, 20000, 2, 3);
+
+==METODO DE PAGO==
+
+INSERT INTO METODO_PAGO (id_metodo_pago, nombre, descripcion)
+VALUES (1, 'Tarjeta de Crédito', 'Pago con tarjeta de crédito');
+
+INSERT INTO METODO_PAGO (id_metodo_pago, nombre, descripcion)
+VALUES (2, 'Efectivo', 'Pago en efectivo al momento de la salida');
+
+==PAGO==
+
+INSERT INTO PAGO (id_pago, id_reserva, monto, fecha_de_pago, id_metodo_pago, estado)
+VALUES (1, 1, 30000, TO_DATE('2023-10-01', 'YYYY-MM-DD'), 1, 'A');
+
+INSERT INTO PAGO (id_pago, id_reserva, monto, fecha_de_pago, id_metodo_pago, estado)
+VALUES (2, 2, 70000, TO_DATE('2023-10-03', 'YYYY-MM-DD'), 2, 'A');

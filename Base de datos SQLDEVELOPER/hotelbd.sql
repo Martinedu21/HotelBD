@@ -55,19 +55,6 @@ CREATE TABLE CLIENTE (
     direccion       VARCHAR2(100)
 );
 
-
-
--- TABLA CONSUMO_SERVICIO
-CREATE TABLE CONSUMO_SERVICIO (
-    id_consumo          NUMBER PRIMARY KEY,
-    cantidad            NUMBER,
-    total               NUMBER,
-    id_reserva          NUMBER,
-    id_servicio         NUMBER,
-    CONSTRAINT CONSUMO_SERVICIO_RESERVA_FK FOREIGN KEY (id_reserva) REFERENCES RESERVA(id_reserva),
-    CONSTRAINT CONSUMO_SERVICIO_SERVICIO_FK FOREIGN KEY (id_servicio) REFERENCES SERVICIO(id_servicio)
-);
-
 -- TABLA RESERVA
 CREATE TABLE RESERVA (
     id_reserva          NUMBER PRIMARY KEY,
@@ -84,6 +71,17 @@ CREATE TABLE RESERVA (
     CONSTRAINT RESERVA_CONSUMO_SERVICIO_FK FOREIGN KEY (id_consumo) REFERENCES CONSUMO_SERVICIO(id_consumo)
 );
 
+-- TABLA CONSUMO_SERVICIO
+CREATE TABLE CONSUMO_SERVICIO (
+    id_consumo          NUMBER PRIMARY KEY,
+    cantidad            NUMBER,
+    total               NUMBER,
+    id_reserva          NUMBER,
+    id_servicio         NUMBER,
+    CONSTRAINT CONSUMO_SERVICIO_RESERVA_FK FOREIGN KEY (id_reserva) REFERENCES RESERVA(id_reserva),
+    CONSTRAINT CONSUMO_SERVICIO_SERVICIO_FK FOREIGN KEY (id_servicio) REFERENCES SERVICIO(id_servicio)
+);
+
 --TABLA METODO DE PAGO
 CREATE TABLE METODO_PAGO (
     id_metodo_pago NUMBER PRIMARY KEY,
@@ -98,7 +96,90 @@ CREATE TABLE PAGO (
     monto               NUMBER(10,2) NOT NULL,
     fecha_de_pago       DATE NOT NULL,
     id_metodo_pago      NUMBER NOT NULL,
-    estado              CHAR(1),
     CONSTRAINT PAGO_RESERVA_FK FOREIGN KEY (id_reserva) REFERENCES RESERVA(id_reserva)
 );
+
+-- ==============================
+-- POBLACION DE TABLAS - GESTIÓN HOTEL
+-- ==============================
+
+--LA A DE LOS CHAR ES DE ACTIVOS
+
+--HOTEL--
+
+INSERT INTO HOTEL (id_hotel, nombre, direccion, telefono, email) 
+VALUES (1, 'Hotel Grand Plaza', 'Av. Libertador 1234, Santiago, Chile', '123456789', 'contactostgo@grandplaza.com');
+
+INSERT INTO HOTEL (id_hotel, nombre, direccion, telefono, email) 
+VALUES (2, 'Hotel Grand Plaza', 'Calle Sol 567, Valparaíso, Chile', '987654321', 'contactovalpo@grandplaza.com');
+
+--SERVICIO--
+
+INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, id_hotel) 
+VALUES (1, 'Wi-Fi', 'Acceso a internet inalámbrico', 5000, 1);
+
+INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, id_hotel) 
+VALUES (2, 'Desayuno', 'Desayuno buffet', 10000, 1);
+
+INSERT INTO SERVICIO (id_servicio, nombre_servicio, descripcion, precio_servicio, id_hotel) 
+VALUES (3, 'Piscina', 'Acceso a la piscina', 15000, 2);
+
+--HABITACION--
+
+INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, id_hotel) 
+VALUES (1, '101', 'Individual', 30000, 'A', 1);
+
+INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, id_hotel) 
+VALUES (2, '102', 'Doble', 50000, 'A', 1);
+
+INSERT INTO HABITACION (id_habitacion, numero, tipo, precio_por_noche, estado, id_hotel) 
+VALUES (3, '201', 'Suite', 120000, 'A', 2);
+
+--EMPLEADO--
+
+INSERT INTO EMPLEADO (id_empleado, nombre, apellido, cargo, telefono, email, id_hotel) 
+VALUES (1, 'Juan', 'Pérez', 'Recepcionista', 11223344, 'juan.perez@grandplaza.com', 1);
+
+INSERT INTO EMPLEADO (id_empleado, nombre, apellido, cargo, telefono, email, id_hotel) 
+VALUES (2, 'Ana', 'Martínez', 'Camarera', 22334455, 'ana.martinez@vistaverde.com', 2);
+
+--CLIENTE--
+
+INSERT INTO CLIENTE (id_cliente, nombre, apellido, run, telefono, email, direccion) 
+VALUES (1, 'Carlos', 'Gómez', '12345678-9', '987654321', 'carlos.gomez@gmail.com', 'Calle Falsa 123');
+
+INSERT INTO CLIENTE (id_cliente, nombre, apellido, run, telefono, email, direccion) 
+VALUES (2, 'Laura', 'Rodríguez', '98765432-1', '123456789', 'laura.rodriguez@gmail.com', 'Av. Libertador 456');
+
+--RESERVA--
+
+INSERT INTO RESERVA (id_reserva, fecha_inicio, fecha_fin, estado, id_cliente, id_habitacion, id_consumo, id_empleado)
+VALUES (1, TO_DATE('2023-10-01', 'YYYY-MM-DD'), TO_DATE('2023-10-05', 'YYYY-MM-DD'), 'A', 1, 1, NULL, 1);
+
+INSERT INTO RESERVA (id_reserva, fecha_inicio, fecha_fin, estado, id_cliente, id_habitacion, id_consumo, id_empleado)
+VALUES (2, TO_DATE('2023-10-03', 'YYYY-MM-DD'), TO_DATE('2023-10-04', 'YYYY-MM-DD'), 'A', 2, 2, NULL, 2);
+
+--CONSUMO SERVICIO--
+
+INSERT INTO CONSUMO_SERVICIO (id_consumo, cantidad, total, id_reserva, id_servicio) 
+VALUES (1, 1, 5000, 1, 1);
+
+INSERT INTO CONSUMO_SERVICIO (id_consumo, cantidad, total, id_reserva, id_servicio) 
+VALUES (2, 2, 20000, 2, 3);
+
+--METODO DE PAGO--
+
+INSERT INTO METODO_PAGO (id_metodo_pago, nombre, descripcion)
+VALUES (1, 'Tarjeta de Crédito', 'Tarjeta de crédito');
+
+INSERT INTO METODO_PAGO (id_metodo_pago, nombre, descripcion)
+VALUES (2, 'Efectivo', 'Pago en efectivo');
+
+--PAGO--
+
+INSERT INTO PAGO (id_pago, id_reserva, monto, fecha_de_pago, id_metodo_pago, estado)
+VALUES (1, 1, 30000, TO_DATE('2023-10-01', 'YYYY-MM-DD'), 1);
+
+INSERT INTO PAGO (id_pago, id_reserva, monto, fecha_de_pago, id_metodo_pago, estado)
+VALUES (2, 2, 70000, TO_DATE('2023-10-03', 'YYYY-MM-DD'), 2);
 
