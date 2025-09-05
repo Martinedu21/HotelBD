@@ -169,11 +169,11 @@ VALUES (2, 2, 20000, 2, 3);
 
 --METODO DE PAGO--
 
-INSERT INTO METODO_PAGO (id_metodo_pago, nombre, descripcion)
-VALUES (1, 'Tarjeta de Crédito', 'Tarjeta de crédito');
-
-INSERT INTO METODO_PAGO (id_metodo_pago, nombre, descripcion)
-VALUES (2, 'Efectivo', 'Pago en efectivo');
+INSERT INTO METODO_PAGO VALUES (1, 'Efectivo', 'Pago en efectivo en recepción');
+INSERT INTO METODO_PAGO VALUES (2, 'Tarjeta Débito', 'Pago con tarjeta de débito');
+INSERT INTO METODO_PAGO VALUES (3, 'Tarjeta Crédito', 'Pago con tarjeta de crédito');
+INSERT INTO METODO_PAGO VALUES (4, 'Transferencia', 'Pago por transferencia bancaria');
+INSERT INTO METODO_PAGO VALUES (5, 'Pago Online', 'Pago mediante plataforma online');
 
 --PAGO--
 
