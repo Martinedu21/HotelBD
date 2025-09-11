@@ -1,0 +1,137 @@
+REGISTRAR RESERVA:
+CREATE OR REPLACE PROCEDURE registrar_reserva (
+    p_cliente_id     IN NUMBER,
+    p_empleado_id    IN NUMBER,
+    p_habitacion_id  IN NUMBER,
+    p_fecha_inicio   IN DATE,
+    p_fecha_fin      IN DATE
+) IS
+    v_ocupada NUMBER;
+BEGIN
+    -- Validar si la habitación ya está ocupada
+    SELECT COUNT(*) INTO v_ocupada
+    FROM reservas
+    WHERE habitacion_id = p_habitacion_id
+      AND estado IN ('P', 'C')  -- Pendiente o Pagada
+      AND (p_fecha_inicio < fecha_fin AND p_fecha_fin > fecha_inicio);
+
+    IF v_ocupada > 0 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'La habitación ya está ocupada en esas fechas');
+    END IF;
+
+    -- Insertar reserva
+    INSERT INTO reservas (
+        id_reserva, fecha_inicio, fecha_fin, estado, id_cliente, id_habitacion, id_empleado
+    ) VALUES (
+        reservas_seq.NEXTVAL, -- Secuencia para id_reserva
+        p_fecha_inicio, 
+        p_fecha_fin, 
+        'P',  -- Estado Pendiente
+        p_cliente_id, 
+        p_habitacion_id, 
+        p_empleado_id
+    );
+
+    COMMIT;
+END;
+
+CALCULAR TOTAL DE RESERVA (DIAS + SERVICIOS):
+
+CREATE OR REPLACE FUNCTION calcular_total_reserva(
+    p_reserva_id IN NUMBER
+) RETURN NUMBER IS
+    v_precio_noche NUMBER;
+    v_noches NUMBER;
+    v_total_servicios NUMBER;
+    v_total NUMBER;
+BEGIN
+    -- Precio de la habitación
+    SELECT h.precio_por_noche
+    INTO v_precio_noche
+    FROM habitaciones h
+    JOIN reservas r ON h.id_habitacion = r.id_habitacion
+    WHERE r.id_reserva = p_reserva_id;
+
+    -- Número de noches
+    SELECT (fecha_fin - fecha_inicio)
+    INTO v_noches
+    FROM reservas
+    WHERE id_reserva = p_reserva_id;
+
+    -- Total de servicios asociados a la reserva
+    SELECT NVL(SUM(s.precio_servicio),0)
+    INTO v_total_servicios
+    FROM servicios_reserva sr
+    JOIN servicios s ON sr.id_servicio = s.id_servicio
+    WHERE sr.id_reserva = p_reserva_id;
+
+    v_total := (v_precio_noche * v_noches) + v_total_servicios;
+
+    RETURN v_total;
+END;
+
+REGISTRAR PAGOS PARCIALES Y ACTUALIZAR ESTADO DE RESERVA:
+
+CREATE OR REPLACE PROCEDURE registrar_pago(
+    p_reserva_id IN NUMBER,
+    p_monto IN NUMBER
+) IS
+    v_estado VARCHAR2(20);
+    v_total_reserva NUMBER;
+    v_total_pagado NUMBER;
+BEGIN
+    -- Verificar estado de la reserva
+    SELECT estado INTO v_estado
+    FROM reservas
+    WHERE id_reserva = p_reserva_id;
+
+    IF v_estado IN ('F', 'X') THEN -- F=Finalizada, X=Cancelada
+        RAISE_APPLICATION_ERROR(-20002, 'No se pueden registrar pagos para reservas canceladas o finalizadas');
+    END IF;
+
+    -- Insertar pago
+    INSERT INTO pagos (id_pago, id_reserva, monto, fecha_pago)
+    VALUES (pagos_seq.NEXTVAL, p_reserva_id, p_monto, SYSDATE);
+
+    -- Actualizar estado si el total pagado >= total de reserva
+    v_total_reserva := calcular_total_reserva(p_reserva_id);
+
+    SELECT NVL(SUM(monto),0) INTO v_total_pagado
+    FROM pagos
+    WHERE id_reserva = p_reserva_id;
+
+    IF v_total_pagado >= v_total_reserva THEN
+        UPDATE reservas
+        SET estado = 'C' -- Pagada
+        WHERE id_reserva = p_reserva_id;
+    END IF;
+
+    COMMIT;
+END;
+
+Notas importantes sobre este código:
+
+Estados de reserva:
+
+'P' = Pendiente
+
+'C' = Pagada
+
+'F' = Finalizada
+
+'X' = Cancelada
+
+Secuencias:
+
+reservas_seq para id_reserva
+
+pagos_seq para id_pago
+Si no las tienes, puedes crearlas con:
+
+CREATE SEQUENCE reservas_seq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE pagos_seq START WITH 1 INCREMENT BY 1;
+
+
+Tabla servicios_reserva:
+
+Necesaria para relacionar los servicios contratados con cada reserva.
